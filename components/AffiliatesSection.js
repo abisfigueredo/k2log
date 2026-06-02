@@ -40,12 +40,12 @@ export function AffiliatesSection() {
   return (
     <section
       id="afiliados"
-      className="relative z-10 -mt-3 w-full mb-2 overflow-hidden bg-k2-peach sm:-mt-4 sm:mb-3 md:-mt-5 md:mb-4 md:min-h-[min(72dvh,36rem)] lg:-mt-6 lg:mb-5"
+      className="relative z-10 -mt-[2.75rem] w-full overflow-x-hidden bg-k2-peach sm:-mt-[3.25rem] md:-mt-[4rem] md:min-h-[min(78dvh,40rem)] lg:-mt-[4.5rem] lg:min-h-[min(82dvh,42rem)]"
       aria-labelledby="afiliados-heading"
     >
-      <div className="grid w-full grid-cols-1 md:min-h-[inherit] md:grid-cols-2 md:items-stretch">
+      <div className="grid min-h-full w-full grid-cols-1 md:min-h-[inherit] md:grid-cols-2 md:items-stretch">
         {/* Columna izquierda — imagen */}
-        <div className="relative h-[min(26vh,11.5rem)] w-full sm:h-[min(29vh,13rem)] md:h-full md:min-h-[inherit]">
+        <div className="relative h-[min(28vh,12.5rem)] w-full sm:h-[min(31vh,14rem)] md:h-full md:min-h-[inherit]">
           <Image
             src={AFFILIATES_BG}
             alt="Comunidad de mujeres y estilo de vida K2Log"
@@ -61,7 +61,7 @@ export function AffiliatesSection() {
         </div>
 
         {/* Columna derecha — contenido */}
-        <div className="flex flex-col justify-center px-5 py-8 sm:px-7 sm:py-10 md:px-9 md:py-12 lg:px-12 lg:py-14">
+        <div className="flex flex-col justify-center px-5 pt-8 pb-6 sm:px-7 sm:pt-10 sm:pb-8 md:px-9 md:pt-12 md:pb-10 lg:px-12 lg:pt-14 lg:pb-12">
           <motion.header
             className="max-w-xl"
             initial={reduceMotion ? false : { opacity: 0, y: 20 }}

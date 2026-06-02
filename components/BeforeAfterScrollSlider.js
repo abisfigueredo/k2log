@@ -107,7 +107,7 @@ export function BeforeAfterScrollSlider({ id = "antes-despues" }) {
       style={{ height: `${PIN_SCROLL_VH * 100}vh` }}
       aria-label="Comparación antes y después del cuidado con K2Log"
     >
-      <div className="sticky top-0 z-[50] flex h-dvh min-h-dvh w-full items-stretch overflow-hidden bg-k2-ink">
+      <div className="sticky top-0 z-[50] flex h-dvh min-h-dvh w-full items-stretch overflow-hidden bg-k2-peach">
         <div className="relative isolate h-dvh min-h-0 w-full max-w-[100vw]">
           <div className="absolute inset-0 z-[1]">
             <Image

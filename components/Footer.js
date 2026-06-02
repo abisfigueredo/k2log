@@ -1,3 +1,5 @@
+import { OrganicWave } from "./OrganicWave";
+
 const WHATSAPP_NUMBER = "+57 301 651 5222";
 const WHATSAPP_HREF = "https://wa.me/573016515222";
 const EMAIL = "contacto@k2log.com";
@@ -72,8 +74,13 @@ const SOCIAL_ICONS = {
 
 export function Footer() {
   return (
-    <footer className="relative mt-auto w-full">
-      <div className="bg-k2-terracotta text-k2-white">
+    <footer className="relative z-10 mt-auto w-full">
+      <OrganicWave
+        tall
+        fill="#dd5116"
+        className="pointer-events-none relative z-[35] -mt-[2rem] w-full shrink-0 -translate-y-[1.7vh] sm:-mt-[2.5rem] md:-mt-[3.25rem] lg:-mt-[3.75rem]"
+      />
+      <div className="relative z-10 -mt-[1.7vh] bg-k2-terracotta text-k2-white">
         <div className="mx-auto w-full max-w-6xl px-5 pb-7 pt-5 sm:px-8 sm:pb-9 sm:pt-6">
           <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
             <div className="max-w-md">

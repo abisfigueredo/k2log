@@ -29,20 +29,14 @@ export default function Home() {
 
       <BenefitsSection />
 
-      {/* Naranja (Benefits): transición hacia Afiliados */}
+      {/* Terracota: solapa el borde superior de Afiliados (z-index + margen negativo en #afiliados) */}
       <OrganicWave
         tall
         fill="#dd5116"
-        className="pointer-events-none relative z-30 mt-0 w-full shrink-0 -translate-y-[2.5vh] rotate-180 sm:mt-1 md:mt-2 lg:mt-3"
+        className="pointer-events-none relative z-[35] -mt-[1.25rem] w-full shrink-0 rotate-180 sm:-mt-[1.5rem] md:-mt-[2rem] lg:-mt-[2.5rem]"
       />
 
       <AffiliatesSection />
-
-      {/* Terracota: transición desde Afiliados hacia Footer */}
-      <OrganicWave
-        fill="#dd5116"
-        className="pointer-events-none relative z-20 -mb-px w-full shrink-0"
-      />
     </>
   );
 }
