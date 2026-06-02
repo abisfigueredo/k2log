@@ -40,59 +40,60 @@ export function AffiliatesSection() {
   return (
     <section
       id="afiliados"
-      className="relative z-10 -mt-[2.75rem] w-full overflow-x-hidden bg-k2-peach sm:-mt-[3.25rem] md:-mt-[4rem] md:min-h-[min(78dvh,40rem)] lg:-mt-[4.5rem] lg:min-h-[min(82dvh,42rem)]"
+      className="relative z-10 -mt-[2.25rem] flex min-h-dvh w-full max-w-full flex-col overflow-x-hidden bg-k2-peach sm:-mt-[2.75rem] md:-mt-[3.25rem] lg:-mt-[3.75rem]"
       aria-labelledby="afiliados-heading"
     >
-      <div className="grid min-h-full w-full grid-cols-1 md:min-h-[inherit] md:grid-cols-2 md:items-stretch">
-        {/* Columna izquierda — imagen */}
-        <div className="relative h-[min(28vh,12.5rem)] w-full sm:h-[min(31vh,14rem)] md:h-full md:min-h-[inherit]">
+      <div className="grid min-h-dvh w-full min-w-0 max-w-full flex-1 grid-cols-1 grid-rows-[minmax(0,1fr)_auto] pt-2 sm:pt-3 md:grid-cols-2 md:grid-rows-1 md:items-stretch md:pt-[clamp(0.875rem,2.75vh,1.625rem)] lg:pt-[clamp(1.125rem,3.25vh,1.875rem)]">
+        {/* Columna izquierda — imagen a ancho completo */}
+        <div className="relative min-h-[min(42dvh,20rem)] w-full overflow-hidden bg-k2-peach md:min-h-full md:h-full">
           <Image
             src={AFFILIATES_BG}
             alt="Comunidad de mujeres y estilo de vida K2Log"
             fill
-            className="object-cover object-[50%_22%] sm:object-[50%_18%] md:object-[14%_50%]"
-            sizes="(max-width: 767px) 100vw, 50vw"
+            className="object-cover object-top sm:object-top md:object-[18%_top] lg:object-[16%_top]"
+            sizes="100vw"
             priority={false}
           />
           <div
-            className="absolute inset-0 bg-gradient-to-t from-k2-peach via-k2-peach/25 to-transparent md:bg-gradient-to-r md:from-transparent md:via-k2-peach/20 md:to-k2-peach"
+            className="pointer-events-none absolute inset-0 bg-gradient-to-t from-k2-peach/80 via-transparent to-transparent md:bg-gradient-to-r md:from-transparent md:via-k2-peach/15 md:to-k2-peach/90"
             aria-hidden
           />
         </div>
 
         {/* Columna derecha — contenido */}
-        <div className="flex flex-col justify-center px-5 pt-8 pb-6 sm:px-7 sm:pt-10 sm:pb-8 md:px-9 md:pt-12 md:pb-10 lg:px-12 lg:pt-14 lg:pb-12">
+        <div className="box-border flex min-h-full min-w-0 w-full max-w-full flex-col justify-center overflow-x-hidden pl-2.5 pr-2 pt-7 pb-4 sm:pl-3.5 sm:pr-3 sm:pt-8 sm:pb-8 md:min-h-dvh md:justify-start md:pl-4.5 md:pr-4 md:pt-[clamp(2.25rem,5.5vh,3.25rem)] md:pb-10 lg:pl-6 lg:pr-5 lg:pt-[clamp(2.5rem,6.5vh,3.75rem)] lg:pb-12">
+          <div className="flex w-full max-w-lg flex-col md:mt-[clamp(0.4rem,1.5vh,1rem)]">
           <motion.header
-            className="max-w-xl"
+            className="max-w-lg"
             initial={reduceMotion ? false : { opacity: 0, y: 20 }}
             whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.35 }}
             transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
           >
-            <p className="font-sans text-xs font-semibold uppercase tracking-[0.35em] text-k2-terracotta">
+            <p className="mt-2 font-sans text-[0.65rem] font-semibold uppercase tracking-[0.32em] text-k2-terracotta sm:mt-2.5 sm:text-xs md:mt-3">
               Programa de afiliados
             </p>
             <h2
               id="afiliados-heading"
-              className="font-display mt-2 text-3xl font-semibold leading-[1.12] text-k2-ink sm:text-4xl lg:text-[2.65rem]"
+              className="font-display mt-2 text-2xl font-semibold leading-[1.12] text-k2-ink sm:mt-2.5 sm:text-3xl md:mt-3 lg:text-[2.15rem]"
             >
               Únete a una comunidad que brilla contigo
             </h2>
-            <p className="mt-2 font-sans text-base font-medium leading-snug text-k2-ink/88 sm:text-lg">
+            <p className="mt-3 font-sans text-sm font-medium leading-snug text-k2-ink/88 sm:mt-3.5 md:mt-4 sm:text-base">
               Afiliadas K2Log: lifestyle, beneficios reales y voz propia.
             </p>
-            <p className="mt-4 font-sans text-base font-light leading-relaxed text-k2-ink/78">
+            <p className="mt-2 font-sans text-sm font-light leading-relaxed text-k2-ink/78 sm:mt-3 md:mt-4 sm:text-[0.9375rem]">
               Forma parte de un círculo exclusivo de creadoras y aliadas que comparten
               la rutina de cuidado natural K2Log y reciben recompensas por cada persona
               que inspiran.
             </p>
           </motion.header>
 
-          <ul className="mt-7 flex max-w-xl flex-col gap-2.5 sm:mt-8 sm:gap-3" role="list">
+          <ul className="mt-3 flex max-w-lg flex-col gap-2 sm:mt-4 sm:gap-2.5" role="list">
             {BENEFIT_CARDS.map(({ icon: Icon, text }, i) => (
               <motion.li
                 key={text}
-                className="flex items-center gap-3 rounded-2xl border border-k2-ink/10 bg-k2-white/25 px-4 py-3 shadow-sm shadow-k2-ink/5 backdrop-blur-md sm:gap-3.5 sm:px-[1.125rem] sm:py-3.5"
+                className="flex items-center gap-2.5 rounded-xl border border-k2-ink/10 bg-k2-white/25 px-3 py-2.5 shadow-sm shadow-k2-ink/5 backdrop-blur-md sm:gap-3 sm:px-3.5 sm:py-3"
                 initial={reduceMotion ? false : { opacity: 0, y: 14 }}
                 whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
@@ -102,10 +103,10 @@ export function AffiliatesSection() {
                   ease: [0.22, 1, 0.36, 1],
                 }}
               >
-                <span className="flex size-10 shrink-0 items-center justify-center rounded-xl border border-k2-orange/25 bg-k2-orange/15 text-k2-terracotta sm:size-11">
-                  <Icon className="size-[1.125rem] sm:size-5" strokeWidth={1.85} aria-hidden />
+                <span className="flex size-9 shrink-0 items-center justify-center rounded-lg border border-k2-orange/25 bg-k2-orange/15 text-k2-terracotta sm:size-10">
+                  <Icon className="size-4 sm:size-[1.125rem]" strokeWidth={1.85} aria-hidden />
                 </span>
-                <span className="font-sans text-sm font-medium leading-snug text-k2-ink sm:text-[0.9375rem]">
+                <span className="font-sans text-xs font-medium leading-snug text-k2-ink sm:text-sm">
                   {text}
                 </span>
               </motion.li>
@@ -113,7 +114,7 @@ export function AffiliatesSection() {
           </ul>
 
           <motion.div
-            className="mt-7 max-w-xl sm:mt-8"
+            className="mt-3 max-w-lg sm:mt-4"
             initial={reduceMotion ? false : { opacity: 0, y: 12 }}
             whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -126,7 +127,7 @@ export function AffiliatesSection() {
             <motion.button
               type="button"
               onClick={showConstructionToast}
-              className="relative inline-flex min-h-[3rem] w-full items-center justify-center overflow-hidden rounded-full bg-k2-white px-8 py-3 font-sans text-[0.78rem] font-semibold uppercase tracking-[0.18em] text-k2-terracotta shadow-xl shadow-black/15 ring-2 ring-k2-orange/10 transition-colors hover:bg-k2-peach focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-k2-terracotta sm:min-h-[3.25rem] sm:text-[0.8125rem]"
+              className="relative inline-flex min-h-[2.75rem] w-full items-center justify-center overflow-hidden rounded-full bg-k2-white px-6 py-2.5 font-sans text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-k2-terracotta shadow-lg shadow-black/12 ring-2 ring-k2-orange/10 transition-colors hover:bg-k2-peach focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-k2-terracotta sm:min-h-[3rem] sm:px-7 sm:text-[0.75rem]"
               whileHover={reduceMotion ? undefined : { scale: 1.05 }}
               whileTap={reduceMotion ? undefined : { scale: 0.98 }}
               animate={
@@ -150,10 +151,11 @@ export function AffiliatesSection() {
             >
               Quiero ser afiliado K2Log
             </motion.button>
-            <p className="mt-4 text-center font-sans text-xs font-medium text-k2-ink/65 sm:text-sm">
+            <p className="mt-3 text-center font-sans text-[0.65rem] font-medium text-k2-ink/65 sm:text-xs">
               +500 mujeres ya están brillando con nosotros
             </p>
           </motion.div>
+          </div>
         </div>
       </div>
 

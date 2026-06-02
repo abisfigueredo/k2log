@@ -33,10 +33,17 @@ export default function Home() {
       <OrganicWave
         tall
         fill="#dd5116"
-        className="pointer-events-none relative z-[35] -mt-[1.25rem] w-full shrink-0 rotate-180 sm:-mt-[1.5rem] md:-mt-[2rem] lg:-mt-[2.5rem]"
+        className="pointer-events-none relative z-[35] -mt-10 -mb-[5.5vh] block w-full shrink-0 rotate-180 leading-none translate-y-[5.5vh] sm:-mt-12 md:-mt-14 lg:-mt-16"
       />
 
       <AffiliatesSection />
+
+      {/* Terracota: transición visible melocotón → footer (sobre fondo peach de Afiliados) */}
+      <OrganicWave
+        tall
+        fill="#dd5116"
+        className="pointer-events-none relative z-[35] -mt-10 -mb-[1vh] block w-full shrink-0 leading-none -translate-y-[1vh] sm:-mt-12 md:-mt-14 lg:-mt-16"
+      />
     </>
   );
 }

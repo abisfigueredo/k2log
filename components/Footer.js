@@ -1,5 +1,3 @@
-import { OrganicWave } from "./OrganicWave";
-
 const WHATSAPP_NUMBER = "+57 301 651 5222";
 const WHATSAPP_HREF = "https://wa.me/573016515222";
 const EMAIL = "contacto@k2log.com";
@@ -75,13 +73,8 @@ const SOCIAL_ICONS = {
 export function Footer() {
   return (
     <footer className="relative z-10 mt-auto w-full">
-      <OrganicWave
-        tall
-        fill="#dd5116"
-        className="pointer-events-none relative z-[35] -mt-[2rem] w-full shrink-0 -translate-y-[1.7vh] sm:-mt-[2.5rem] md:-mt-[3.25rem] lg:-mt-[3.75rem]"
-      />
-      <div className="relative z-10 -mt-[1.7vh] bg-k2-terracotta text-k2-white">
-        <div className="mx-auto w-full max-w-6xl px-5 pb-7 pt-5 sm:px-8 sm:pb-9 sm:pt-6">
+      <div className="relative -mt-3 bg-k2-terracotta pt-[calc(0.5rem*0.98)] text-k2-white sm:-mt-4 md:-mt-6">
+        <div className="mx-auto w-full max-w-6xl px-[calc(1.25rem*0.98)] pb-[calc(1.75rem*0.98)] pt-[calc(1rem*0.98)] sm:px-[calc(2rem*0.98)] sm:pb-[calc(2.25rem*0.98)] sm:pt-[calc(1.5rem*0.98)]">
           <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
             <div className="max-w-md">
               <p className="font-k2-brand-name font-display text-2xl tracking-tight text-k2-white sm:text-3xl">
@@ -118,7 +111,7 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="mt-12 border-t border-white/70 pt-8">
+          <div className="mt-[calc(3rem*0.98)] border-t border-white/70 pt-[calc(2rem*0.98)]">
             <div className="flex flex-col gap-5 text-center text-xs font-light text-white/90 sm:grid sm:grid-cols-3 sm:items-center sm:gap-3 sm:text-left">
               <p className="sm:justify-self-start">
                 © {new Date().getFullYear()}{" "}

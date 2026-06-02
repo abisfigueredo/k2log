@@ -10,7 +10,7 @@ export function OrganicWave({ className = "", fill = "#dd5116", tall = false }) 
       : "h-10 w-[calc(100%+1px)] sm:h-14 md:h-16";
   return (
     <div
-      className={`relative w-full overflow-hidden leading-none ${className}`}
+      className={`relative w-full shrink-0 overflow-hidden leading-none ${className}`}
       aria-hidden="true"
     >
       <svg
